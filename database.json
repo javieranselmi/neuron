@@ -1,0 +1,11 @@
+{
+  "defaultEnv": "local",
+  "local": {
+    "driver": "mysql",
+    "host": "tarantula.cmcsvwubgzig.us-east-1.rds.amazonaws.com",
+    "user": "tarantula",
+    "password": "tarantula",
+    "multipleStatements": true,
+    "database": "tarantula"
+  }
+}
