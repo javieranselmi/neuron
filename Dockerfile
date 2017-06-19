@@ -5,9 +5,9 @@ RUN sudo apt-get install -y curl
 RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 RUN apt-get install -y nodejs
 
-COPY . /app/analytics-cli
+COPY . /app/neuron
 
-WORKDIR /app/analytics-cli
+WORKDIR /app/neuron
 RUN npm install -g db-migrate
 RUN npm install -g nodemon
 #RUN npm install cross-env

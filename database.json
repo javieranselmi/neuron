@@ -2,10 +2,11 @@
   "defaultEnv": "local",
   "local": {
     "driver": "mysql",
-    "host": "tarantula.cmcsvwubgzig.us-east-1.rds.amazonaws.com",
-    "user": "tarantula",
-    "password": "tarantula",
+    "port": "3307",
+    "host": "db",
+    "user": "neuron",
+    "password": "neuron",
     "multipleStatements": true,
-    "database": "tarantula"
+    "database": "neuron"
   }
 }

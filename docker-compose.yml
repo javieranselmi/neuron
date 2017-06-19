@@ -1,10 +1,10 @@
-analytics-cli:
+neuron:
   build: .
   command: nodemon server --legacy-watch
   ports:
-    - "3000:3000"
+    - "3001:3000"
   volumes:
-    - ./:/app/analytics-cli
+    - ./:/app/neuron
   links:
     - db:db
 
@@ -14,12 +14,12 @@ db:
   volumes:
       - /conf.d/:/etc/mysql/conf.d
   environment:
-    MYSQL_ROOT_PASSWORD: tarantula
-    MYSQL_DATABASE: tarantula
-    MYSQL_USER: tarantula
-    MYSQL_PASSWORD: tarantula
+    MYSQL_ROOT_PASSWORD: neuron
+    MYSQL_DATABASE: neuron
+    MYSQL_USER: neuron
+    MYSQL_PASSWORD: neuron
   ports:
-    - "3306:3306"
+    - "3307:3306"
   volumes:
     - ./:/app/
     - ./config/custom_mysql.cnf:/etc/mysql/conf.d/custom_mysql.cnf

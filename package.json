@@ -1,6 +1,6 @@
 {
-  "name": "analytics-cli",
-  "description": "Analaytics client",
+  "name": "neuron",
+  "description": "Neuron",
   "version": "1.0.0",
   "author": {
     "name": "Javier Anselmi",

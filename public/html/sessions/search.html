@@ -1,0 +1,17 @@
+<h3>Sesiones!</h3>
+<table class="table">
+    <thead>
+    <tr>
+        <th class="subentities-list-header">Fecha</th>
+        <th class="subentities-list-header">Paciente</th>
+        <th class="subentities-list-header">Profesional</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="session in sessions">
+        <td>{{ session.date }}</td>
+        <td>{{ session.patient.first_name }} {{ session.patient.last_name }}</td>
+        <td>{{ session.professional.first_name }} {{ session.professional.last_name }}</td>
+    </tr>
+    </tbody>
+</table>
