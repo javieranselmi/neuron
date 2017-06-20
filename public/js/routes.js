@@ -25,6 +25,12 @@
             controller: 'sessionsSearchController'
         });
 
+        $stateProvider.state('sessions.create', {
+            url: '/create',
+            templateUrl: '../html/sessions/create.html',
+            controller: 'sessionsCreateController'
+        });
+
     }
     angular.module(moduleName).config(config);
 })();

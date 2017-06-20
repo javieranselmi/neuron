@@ -10,6 +10,7 @@
     <title>Neuron</title>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="./js/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/app.css">
 </head>
 <body>
 
@@ -31,7 +32,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a ui-sref="sessions.search">Buscar Sesiones</a></li>
-                <li><a>Cargar sesión</a></li>
+                <li><a ui-sref="sessions.create">Cargar sesión</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a class="navbar-brand">Bienvenido!</a></li>
@@ -44,11 +45,13 @@
 
 <div class="main-container" ui-view></div>
 
+<script src="./js/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="./js/bower_components/angular/angular.min.js"></script>
-<script src="./js/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 <script src="./js/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="./js/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="./js/app.js"></script>
-<script src="./js/routes.js"></script>
 <script src="./js/controllers/sessions-search-ctrl.js"></script>
+<script src="./js/controllers/sessions-create-ctrl.js"></script>
+<script src="./js/routes.js"></script>
 </body>
 </html>

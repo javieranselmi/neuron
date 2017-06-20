@@ -5,6 +5,7 @@
         <th class="subentities-list-header">Fecha</th>
         <th class="subentities-list-header">Paciente</th>
         <th class="subentities-list-header">Profesional</th>
+        <th class="subentities-list-header">Prestaciones</th>
     </tr>
     </thead>
     <tbody>
@@ -12,6 +13,13 @@
         <td>{{ session.date }}</td>
         <td>{{ session.patient.first_name }} {{ session.patient.last_name }}</td>
         <td>{{ session.professional.first_name }} {{ session.professional.last_name }}</td>
+        <td>
+            <ul>
+                <li ng-repeat="service in session.services">
+                    {{ service.type }} {{ service.subtype }}
+                </li>
+            </ul>
+        </td>
     </tr>
     </tbody>
 </table>
