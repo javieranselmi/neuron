@@ -9,3 +9,14 @@ exports.getSessions = function (req, res, next) {
             next(err)
         })
 };
+
+
+exports.postSession = function (req, res, next) {
+
+    return Session.forge( req.body ).save().then(function (result) {
+        res.status(200).json(result)
+    })
+        .catch(function (err) {
+            next(err)
+        })
+};
