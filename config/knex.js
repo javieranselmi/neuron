@@ -5,9 +5,9 @@ var dbConfig = {
     client: 'mysql',
     debug: false,
     connection: {
-        host     : 'db',
+        host     : 'neuron.c7cblth0trpq.us-east-1.rds.amazonaws.com',
         user     : 'neuron',
-        password : 'neuron',
+        password : 'zapata12',
         database : 'neuron',
         charset   : 'utf8',
     } //TODO ADD to .env

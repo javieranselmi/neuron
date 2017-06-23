@@ -2,10 +2,10 @@
   "defaultEnv": "local",
   "local": {
     "driver": "mysql",
-    "port": "3307",
-    "host": "db",
+    "port": "3306",
+    "host": "neuron.c7cblth0trpq.us-east-1.rds.amazonaws.com",
     "user": "neuron",
-    "password": "neuron",
+    "password": "zapata12",
     "multipleStatements": true,
     "database": "neuron"
   }
