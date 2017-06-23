@@ -6,4 +6,5 @@ secrets
 .client_secret.json
 /client_secret.json
 /coverage
+/public/app/js/bower_components
 /public/js/bower_components

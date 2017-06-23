@@ -21,13 +21,13 @@
 
         $stateProvider.state('sessions.search', {
             url: '/search',
-            templateUrl: '../html/sessions/search.html',
+            templateUrl: 'app/html/sessions/search.html',
             controller: 'sessionsSearchController'
         });
 
         $stateProvider.state('sessions.create', {
             url: '/create',
-            templateUrl: '../html/sessions/create.html',
+            templateUrl: 'app/html/sessions/create.html',
             controller: 'sessionsCreateController'
         });
 
