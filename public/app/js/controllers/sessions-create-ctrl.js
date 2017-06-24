@@ -4,10 +4,10 @@
     controller.$inject = ["$scope","$resource","$filter","$state"];
 
     function controller($scope, $resource,$filter,$state) {
-        var Professional = $resource('http://192.168.99.100:3001/api/v1/professionals');
-        var Patient = $resource('http://192.168.99.100:3001/api/v1/patients');
-        var Service = $resource('http://192.168.99.100:3001/api/v1/services');
-        var Session = $resource('http://192.168.99.100:3001/api/v1/sessions');
+        var Professional = $resource('/api/v1/professionals');
+        var Patient = $resource('/api/v1/patients');
+        var Service = $resource('/api/v1/services');
+        var Session = $resource('/api/v1/sessions');
 
         var professionals = Professional.query( function() {
             $scope.professionals = professionals;
