@@ -4,42 +4,39 @@
     <form>
         <div class="form-group">
             <label for="session-date">Fecha de la sesión</label>
-            <input type="date" class="form-control" id="session-date" placeholder="Fecha de la sesión">
+            <input type="date" class="form-control" id="session-date" ng-model="session.date" placeholder="Fecha de la sesión">
         </div>
 
         <div class="form-group">
-            <label for="professional">Profesional:</label>
-            <select class="form-control" id="professional">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
+            <label for="professional-select">Profesional:</label>
+            <select name="professional-select" id="professional-select" ng-model="session.professional_id">
+                <option ng-repeat="professional in professionals" value="{{professional.id}}">{{professional.first_name + ' ' + professional.last_name}}</option>
             </select>
         </div>
 
         <div class="form-group">
-            <label for="patient">Paciente:</label>
-            <select class="form-control" id="patient">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
+            <label for="patient-select">Paciente:</label>
+            <select name="patient-select" id="patient-select" ng-model="session.patient_id">
+                <option ng-repeat="patient in patients" value="{{patient.id}}">{{patient.first_name + ' ' + patient.last_name}}</option>
             </select>
         </div>
 
         <div class="form-group">
             <label for="comment">Comentarios:</label>
-            <textarea id="comment" class="form-control" rows="3"></textarea>
+            <textarea id="comment" class="form-control" rows="3" ng-model="session.comment"></textarea>
         </div>
 
         <div class="form-group">
-            <label for="session-date">Cantidad de personas presentes:</label>
+            <div class="checkbox" ng-repeat="service in services">
+                <label><input type="checkbox" ng-model="service.chosen" value="">{{ service.type + ' ' + (service.subtype || '') }}</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="session-date" ng-model="session.comment">Cantidad de personas presentes:</label>
             <input type="number" class="form-control" id="number-of-attendants">
         </div>
 
-
-
-
-        <button type="submit" class="btn btn-block btn-primary">Submit</button>
+        <button type="submit" class="btn btn-block btn-primary" ng-click="submit()">Registrar sesión</button>
     </form>
 </div>

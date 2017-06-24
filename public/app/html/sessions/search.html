@@ -5,14 +5,16 @@
         <th class="subentities-list-header">Fecha</th>
         <th class="subentities-list-header">Paciente</th>
         <th class="subentities-list-header">Profesional</th>
+        <th class="subentities-list-header">Comentarios</th>
         <th class="subentities-list-header">Prestaciones</th>
     </tr>
     </thead>
     <tbody>
     <tr ng-repeat="session in sessions">
-        <td>{{ session.date }}</td>
+        <td>{{ session.date | date : 'yyyy-MM-dd' }}</td>
         <td>{{ session.patient.first_name }} {{ session.patient.last_name }}</td>
         <td>{{ session.professional.first_name }} {{ session.professional.last_name }}</td>
+        <td>{{ session.comment }}</td>
         <td>
             <ul>
                 <li ng-repeat="service in session.services">
