@@ -8,3 +8,4 @@ secrets
 /coverage
 /public/app/js/bower_components
 /public/js/bower_components
+/public/app/bower_components
